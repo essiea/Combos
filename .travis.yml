@@ -12,7 +12,11 @@ script:
    - echo 5
    
 matrix:
-  include:
+fast_finish: true
+  allow_features:
+  - python 2.7
+  
+  exclude:
   - python: 3.4
     env: QA
   
